@@ -152,8 +152,8 @@
 
 ;; Operations to use within queries
 
-(defmapop [re-parse [pattern]]
-  "Accepts a regex `pattern` and a string argument `str` and returns
+(defmapop re-parse {:params [pattern]}
+    "Accepts a regex `pattern` and a string argument `str` and returns
   the groups within `str` that match the supplied `pattern`."
   [str]
   (re-seq pattern str))
